@@ -14,7 +14,7 @@ By default the jobs are not scheduled, that's why in this repo you'll find sever
 
 > I recommend that you run a full backup after the index maintenance. The following differential backups will then be small. I also recommend that you perform the full backup after the integrity check. Then you know that the integrity of the backup is okay.
 
-- [Reference](http://ola.hallengren.com/frequently-asked-questions.html)
+[Reference](http://ola.hallengren.com/frequently-asked-questions.html)
 
 ## User databases
 
