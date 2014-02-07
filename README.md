@@ -9,8 +9,10 @@ This is a clone repository from [Ola Hallengren's SQL Server Maintenance Solutio
 By default the jobs are not scheduled, that's why in this repo you'll find several t-sql scripts to schedule the maintenance jobs.
 
 > So how should you schedule these new maintenance jobs? The answer depends on your maintenance window, the size of your databases, the maximum data loss you can tolerate, and many other factors. Here are some guidelines that you can start with, but you will need to adjust these to your environment.
+
 > I recommend that you run a full backup after the index maintenance. The following differential backups will then be small. I also recommend that you perform the full backup after the integrity check. Then you know that the integrity of the backup is okay.
-> [Reference](http://ola.hallengren.com/frequently-asked-questions.html)
+
+- [Reference](http://ola.hallengren.com/frequently-asked-questions.html)
 
 ## User databases
 
