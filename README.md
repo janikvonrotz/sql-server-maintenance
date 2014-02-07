@@ -2,7 +2,7 @@
 
 This is a clone repository from [Ola Hallengren's SQL Server Maintenance Solution](http://ola.hallengren.com/)
 
-[# License](http://ola.hallengren.com/license.html)
+# [License](http://ola.hallengren.com/license.html)
 
 # Schedule
 
