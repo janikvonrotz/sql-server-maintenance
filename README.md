@@ -4,6 +4,8 @@ This is a clone repository from [Ola Hallengren's SQL Server Maintenance Solutio
 
 # [License](http://ola.hallengren.com/license.html)
 
+# [Installation](http://ola.hallengren.com/frequently-asked-questions.html)
+
 # Schedule
 
 By default the jobs are not scheduled, that's why in this repo you'll find several t-sql scripts to schedule the maintenance jobs.
