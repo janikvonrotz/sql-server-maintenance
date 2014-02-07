@@ -16,50 +16,50 @@ By default the jobs are not scheduled, that's why in this repo you'll find sever
 
 ## User databases
 
-Full backup one day per week
-Job Name: DatabaseBackup - USER_DATABASES - FULL
-Execute on sunday at 21:00
+Full backup one day per week  
+Job Name: DatabaseBackup - USER_DATABASES - FULL  
+Execute on sunday at 21:00  
 
-Differential backup all other days of the week
-Job Name: DatabaseBackup - USER_DATABASES - DIFF
-Execute on Monday to saturday at 21:00
+Differential backup all other days of the week  
+Job Name: DatabaseBackup - USER_DATABASES - DIFF  
+Execute on Monday to saturday at 21:00  
 
-Transaction log backup every hour
-Job Name: DatabaseBackup - USER_DATABASES - LOG
-Execute at 06:00
+Transaction log backup every hour  
+Job Name: DatabaseBackup - USER_DATABASES - LOG  
+Execute at 06:00  
 
-Integrity check one day per week
-Job Name: DatabaseIntegrityCheck - USER_DATABASES
-Execute on sunday at 20:00
+Integrity check one day per week  
+Job Name: DatabaseIntegrityCheck - USER_DATABASES  
+Execute on sunday at 20:00  
 
-Index maintenance one day per week
-Job Name: IndexOptimize - USER_DATABASES
-Execute on sunday at 19:00
+Index maintenance one day per week  
+Job Name: IndexOptimize - USER_DATABASES  
+Execute on sunday at 19:00  
 		
 ## System databases
 
-Full backup every day
-Job Name: DatabaseBackup - SYSTEM_DATABASES - FULL
-Execute at 23:00 
+Full backup every day  
+Job Name: DatabaseBackup - SYSTEM_DATABASES - FULL  
+Execute at 23:00  
 
-Integrity check one day per week
-Job Name: DatabaseIntegrityCheck - SYSTEM_DATABASES
-Execute on sunday at 22:00
+Integrity check one day per week  
+Job Name: DatabaseIntegrityCheck - SYSTEM_DATABASES  
+Execute on sunday at 22:00  
 		
 ## Cleanup
 
-sp_delete_backuphistory one day per week
-Job Name: sp_delete_backuphistory
-Execute on monday at 04:00 
+sp_delete_backuphistory one day per week  
+Job Name: sp_delete_backuphistory  
+Execute on monday at 04:00  
 	
-sp_purge_jobhistory one day per week
-Job Name: sp_purge_jobhistory
-Execute on monday at 04:00 
+sp_purge_jobhistory one day per week  
+Job Name: sp_purge_jobhistory  
+Execute on monday at 04:00  
 	
-CommandLog cleanup one day per week
-Job Name: CommandLog Cleanup
-Execute on monday at 04:00 
+CommandLog cleanup one day per week  
+Job Name: CommandLog Cleanup  
+Execute on monday at 04:00  
 	
-Output file cleanup one day per week
-Job name: Output File Cleanup
-Execute on monday at 04:00 
+Output file cleanup one day per week  
+Job name: Output File Cleanup  
+Execute on monday at 04:00  
