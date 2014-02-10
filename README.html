@@ -1,0 +1,25 @@
+<h1 id="about">About</h1>
+<p>This is a clone repository from <a href="http://ola.hallengren.com/">Ola Hallengren&#39;s SQL Server Maintenance Solution</a></p>
+<h1 id="-license-http-ola-hallengren-com-license-html-"><a href="http://ola.hallengren.com/license.html">License</a></h1>
+<h1 id="-installation-http-ola-hallengren-com-frequently-asked-questions-html-"><a href="http://ola.hallengren.com/frequently-asked-questions.html">Installation</a></h1>
+<h1 id="schedule">Schedule</h1>
+<p>By default the jobs are not scheduled, that&#39;s why in this repo you&#39;ll find several t-sql scripts to schedule the maintenance jobs.</p>
+<blockquote>
+<p>So how should you schedule these new maintenance jobs? The answer depends on your maintenance window, the size of your databases, the maximum data loss you can tolerate, and many other factors. Here are some guidelines that you can start with, but you will need to adjust these to your environment.</p>
+<p>I recommend that you run a full backup after the index maintenance. The following differential backups will then be small. I also recommend that you perform the full backup after the integrity check. Then you know that the integrity of the backup is okay.</p>
+</blockquote>
+<p><a href="http://ola.hallengren.com/frequently-asked-questions.html">Reference</a></p>
+<h2 id="user-databases">User databases</h2>
+<p>Full backup one day per week<br>Job Name: DatabaseBackup - USER_DATABASES - FULL<br>Execute on sunday at 21:00  </p>
+<p>Differential backup all other days of the week<br>Job Name: DatabaseBackup - USER_DATABASES - DIFF<br>Execute on Monday to saturday at 21:00  </p>
+<p>Transaction log backup every hour<br>Job Name: DatabaseBackup - USER_DATABASES - LOG<br>Execute at 06:00  </p>
+<p>Integrity check one day per week<br>Job Name: DatabaseIntegrityCheck - USER_DATABASES<br>Execute on sunday at 20:00  </p>
+<p>Index maintenance one day per week<br>Job Name: IndexOptimize - USER_DATABASES<br>Execute on sunday at 19:00  </p>
+<h2 id="system-databases">System databases</h2>
+<p>Full backup every day<br>Job Name: DatabaseBackup - SYSTEM_DATABASES - FULL<br>Execute at 23:00  </p>
+<p>Integrity check one day per week<br>Job Name: DatabaseIntegrityCheck - SYSTEM_DATABASES<br>Execute on sunday at 22:00  </p>
+<h2 id="cleanup">Cleanup</h2>
+<p>sp_delete_backuphistory one day per week<br>Job Name: sp_delete_backuphistory<br>Execute on monday at 04:00  </p>
+<p>sp_purge_jobhistory one day per week<br>Job Name: sp_purge_jobhistory<br>Execute on monday at 04:00  </p>
+<p>CommandLog cleanup one day per week<br>Job Name: CommandLog Cleanup<br>Execute on monday at 04:00  </p>
+<p>Output file cleanup one day per week<br>Job name: Output File Cleanup<br>Execute on monday at 04:00  </p>
